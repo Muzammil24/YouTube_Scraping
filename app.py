@@ -33,7 +33,7 @@ def index():
             j = 0  # urls
             channel_data = []
 
-            for title in titles[:10]:
+            for title in titles[:50]:
                 title = title.text
                 views_1 = views[i].text
                 len1 = views[i + 1].text
