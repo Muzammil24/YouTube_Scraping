@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>BasicInfo</title>
+</head>
+
+<body>
+
+    <div class="table-users">
+        <div class="header">Channel_Statistics</div>
+
+        <table cellspacing="0">
+            <tr>
+                <th>Title</th>
+                <th>Views</th>
+                <th>Date</th>
+                <th>Channel</th>
+                <th>Subscribers</th>
+                <th>Description</th>
+                <th>Likes</th>
+
+            </tr>
+
+<!--            <tr>-->
+<!--                <td>{{stats1['Title']}}</td>-->
+<!--                <td>{{stats1['Views']}}</td>-->
+<!--                <td>{{stats1['Date']}}</td>-->
+<!--                <td>{{stats1['Channel']}}</td>-->
+<!--                <td>{{stats1['Subscribers']}}</td>-->
+<!--                <td>{{stats1['Description']}}</td>-->
+<!--                <td>{{stats1['Likes']}}</td>-->
+
+<!--            <tr/>-->
+
+             <tr>
+                <td>{{stats1.get('Title')}}</td>
+                <td>{{stats1.get('Views')}}</td>
+                <td>{{stats1.get('Date')}}</td>
+                <td>{{stats1.get('Channel')}}</td>
+                <td>{{stats1.get('Subscribers')}}</td>
+                <td>{{stats1.get('Description')}}</td>
+                <td>{{stats1.get('Likes')}}</td>
+
+            <tr/>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
