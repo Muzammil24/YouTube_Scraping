@@ -23,6 +23,7 @@ def index():
             driver = webdriver.Chrome()
             searchString = request.form['content']
             driver.get(searchString)
+            time.sleep(7)
             content = driver.page_source.encode("utf-8").strip()
             soup = bs(content, 'lxml')
             titles = soup.findAll('a', id='video-title')
